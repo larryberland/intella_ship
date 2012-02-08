@@ -12,8 +12,8 @@ class CreateAdminSystemDomains < ActiveRecord::Migration
       t.string :meeting_password
       t.references :webex_service_type
       t.boolean :use_credential
-      t.boolean :allow_registration_passwords
-      t.boolean :allow_session_password
+      t.boolean :without_registration_password
+      t.boolean :without_session_password
 
       t.timestamps
     end

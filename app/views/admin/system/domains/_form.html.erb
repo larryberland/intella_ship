@@ -11,10 +11,13 @@
     </div>
   <% end %>
 
+  <% if @domain.new_record? %>
   <div class="field">
     <%= f.label :name, 'System Domain Name:' %><br />
     <%= f.text_field :name %>
   </div>
+  <% end %>
+
   <div class="field">
     <%= f.check_box :enable %>
     <%= f.label :enable, 'Enable WebEx activities' %><br />
@@ -41,11 +44,11 @@
   </div>
   <div class="field">
     <%= f.label :password, 'WebEx Administrator Password:*' %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </div>
   <div class="field">
     <%= f.label :meeting_password, 'Meeting or Training Center Password:*' %><br />
-    <%= f.text_field :meeting_password %>
+    <%= f.password_field :meeting_password %>
   </div>
   <div class="field">
     <%= f.label :webex_service_type, 'WebEx Service Type:*' %><br />
@@ -56,14 +59,14 @@
     <%= f.label :use_credential, 'Use existing WebEx credentials to launch WebEx sessions '  %><br />
   </div>
   <div class="field">
-    <%= f.check_box :allow_registration_passwords %>
-    <%= f.label :allow_registration_passwords, 'Allow participants without registration password to attend session'  %><br />
+    <%= f.check_box :without_registration_password %>
+    <%= f.label :without_registration_password, 'Allow participants without registration password to attend session'  %><br />
   </div>
   <div class="field">
-    <%= f.check_box :allow_session_password %>
-    <%= f.label :allow_session_password,'Allow participants without session password to attend session' %><br />
+    <%= f.check_box :without_session_password %>
+    <%= f.label :without_session_password,'Allow participants without session password to attend session' %><br />
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit('Update Settings') %>
   </div>
 <% end %>

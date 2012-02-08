@@ -1,39 +1,17 @@
-<h1>Listing admin_system_domains</h1>
+<h1>System Domain Settings</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Enable</th>
     <th>Server name</th>
-    <th>Host name</th>
-    <th>Site</th>
-    <th>Partner</th>
-    <th>Username</th>
-    <th>Password</th>
-    <th>Webex service type</th>
-    <th>Use credential</th>
-    <th>Allow registration passwords</th>
-    <th>Allow session password</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @domains.each do |admin_system_domain| %>
   <tr>
-    <td><%= admin_system_domain.name %></td>
-    <td><%= admin_system_domain.enable %></td>
+    <td><%= "#{admin_system_domain.name} Settings" %></td>
     <td><%= admin_system_domain.server_name %></td>
-    <td><%= admin_system_domain.host_name %></td>
-    <td><%= admin_system_domain.site_id %></td>
-    <td><%= admin_system_domain.partner_id %></td>
-    <td><%= admin_system_domain.username %></td>
-    <td><%= admin_system_domain.password %></td>
-    <td><%= admin_system_domain.webex_service_type %></td>
-    <td><%= admin_system_domain.use_credential %></td>
-    <td><%= admin_system_domain.allow_registration_passwords %></td>
-    <td><%= admin_system_domain.allow_session_password %></td>
-    <td><%= link_to 'Show', admin_system_domain %></td>
     <td><%= link_to 'Edit', edit_admin_system_domain_path(admin_system_domain) %></td>
     <td><%= link_to 'Destroy', admin_system_domain, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -42,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New Domain', new_admin_system_domain_path %>
+<% # link_to 'New Domain', new_admin_system_domain_path %>

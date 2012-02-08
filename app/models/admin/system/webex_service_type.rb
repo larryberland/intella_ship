@@ -1,5 +1,7 @@
 class Admin::System::WebexServiceType < ActiveRecord::Base
 
+  has_many :domains, :class_name => 'Admin::System::Domain'
+
   MEETING     = 'Meeting Center'
   TRAINING   = 'Training Center'
   MEETING_ENTERPRISE     = 'Enterprise Edition Meeting Center'

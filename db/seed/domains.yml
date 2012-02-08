@@ -1,0 +1,16 @@
+:domains:
+  - :name: 
+    :name: 'WebEx'
+    :enable: true
+    :server_name: 'Galileo WebEx Site'
+    :host_name: 'http://intella_ship.com/training/new'
+    :site_id: '320049'
+    :partner_id: '320tr'
+    :username: 'lmsadmin'
+    :password: 'password'
+    :meeting_password: 'meeting'
+    :use_credential: true
+    :without_registration_password: true
+    :without_session_password: true
+
+  

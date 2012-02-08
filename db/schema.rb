@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20120208144132) do
     t.string   "meeting_password"
     t.integer  "webex_service_type_id"
     t.boolean  "use_credential"
-    t.boolean  "allow_registration_passwords"
-    t.boolean  "allow_session_password"
+    t.boolean  "without_registration_password"
+    t.boolean  "without_session_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
