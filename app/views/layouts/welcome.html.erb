@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IntellaShip</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='body_wrapper'>
+  <div class="bp">
+    <%= raw "<p class='flash_notice'> #{notice}</p>" if notice %>
+    <%= raw "<p class='flash_error'>#{alert}</p>" if alert %>
+  </div>
+
+  <!--
+  <% #render 'shared/main_header' %>
+  -->
+
+  <div id='content_wrapper' class='container'>
+    <%= yield %>
+  </div>
+
+</div>
+
+<div id="footer_buffer" class='bp'>
+  &nbsp;
+</div>
+
+<%= render 'shared/main_footer' %>
+
+<%= yield :bottom %>
+
+<script>
+    jQuery(window).ready(
+            function() {
+                jQuery('.flash_notice').delay(6000).slideUp('slow');
+                jQuery('.flash_error').delay(6000).slideUp('slow');
+            }
+    );
+</script>
+
+</body>
+</html>
