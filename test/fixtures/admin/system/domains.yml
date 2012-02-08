@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  enable: false
+  server_name: MyString
+  host_name: MyString
+  site_id: MyString
+  partner_id: MyString
+  username: MyString
+  password: MyString
+  webex_service_type: 
+  use_credential: false
+  allow_registration_passwords: false
+  allow_session_password: false
+
+two:
+  name: MyString
+  enable: false
+  server_name: MyString
+  host_name: MyString
+  site_id: MyString
+  partner_id: MyString
+  username: MyString
+  password: MyString
+  webex_service_type: 
+  use_credential: false
+  allow_registration_passwords: false
+  allow_session_password: false

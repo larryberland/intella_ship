@@ -1,10 +1,22 @@
 IntellaShip::Application.routes.draw do
+
+  namespace :admin do  namespace :system do resources :webex_service_types end end
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   root :to => 'welcome#index'
 
   resource :welcome, :only => [:index]
+
+
+  namespace :admin do
+    namespace :system do
+      resources :domains
+    end
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

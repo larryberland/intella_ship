@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @domain.name %>
+</p>
+
+<p>
+  <b>Enable:</b>
+  <%= @domain.enable %>
+</p>
+
+<p>
+  <b>Server name:</b>
+  <%= @domain.server_name %>
+</p>
+
+<p>
+  <b>Host name:</b>
+  <%= @domain.host_name %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @domain.site_id %>
+</p>
+
+<p>
+  <b>Partner:</b>
+  <%= @domain.partner_id %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @domain.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @domain.password %>
+</p>
+
+<p>
+  <b>Webex service type:</b>
+  <%= @domain.webex_service_type %>
+</p>
+
+<p>
+  <b>Use credential:</b>
+  <%= @domain.use_credential %>
+</p>
+
+<p>
+  <b>Allow registration passwords:</b>
+  <%= @domain.allow_registration_passwords %>
+</p>
+
+<p>
+  <b>Allow session password:</b>
+  <%= @domain.allow_session_password %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_system_domain_path(@domain) %> |
+<%= link_to 'Back', admin_system_domains_path %>

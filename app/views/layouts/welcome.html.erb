@@ -13,9 +13,7 @@
     <%= raw "<p class='flash_error'>#{alert}</p>" if alert %>
   </div>
 
-  <!--
-  <% #render 'shared/main_header' %>
-  -->
+  <%= render 'shared/main_header' %>
 
   <div id='content_wrapper' class='container'>
     <%= yield %>

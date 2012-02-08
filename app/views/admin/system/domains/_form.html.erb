@@ -1,0 +1,69 @@
+<%= form_for(@domain) do |f| %>
+  <% if @domain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@domain.errors.count, "error") %> prohibited this admin_system_domain from being saved:</h2>
+
+      <ul>
+      <% @domain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, 'System Domain Name:' %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.check_box :enable %>
+    <%= f.label :enable, 'Enable WebEx activities' %><br />
+  </div>
+  <div class="field">
+    <%= f.label :server_name, 'Server Name:*' %><br />
+    <%= f.text_field :server_name %>
+  </div>
+  <div class="field">
+    <%= f.label :host_name, 'Host Name:*' %><br />
+    <%= f.text_field :host_name %>
+  </div>
+  <div class="field">
+    <%= f.label :site_id, 'Site ID:*' %><br />
+    <%= f.text_field :site_id %>
+  </div>
+  <div class="field">
+    <%= f.label :partner_id, 'Partner ID:*' %><br />
+    <%= f.text_field :partner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :username, 'WebEx Administrator Username:*' %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password, 'WebEx Administrator Password:*' %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :meeting_password, 'Meeting or Training Center Password:*' %><br />
+    <%= f.text_field :meeting_password %>
+  </div>
+  <div class="field">
+    <%= f.label :webex_service_type, 'WebEx Service Type:*' %><br />
+    <%= f.select :webex_service_type_id, @service_types %>
+  </div>
+  <div class="field">
+    <%= f.check_box :use_credential%>
+    <%= f.label :use_credential, 'Use existing WebEx credentials to launch WebEx sessions '  %><br />
+  </div>
+  <div class="field">
+    <%= f.check_box :allow_registration_passwords %>
+    <%= f.label :allow_registration_passwords, 'Allow participants without registration password to attend session'  %><br />
+  </div>
+  <div class="field">
+    <%= f.check_box :allow_session_password %>
+    <%= f.label :allow_session_password,'Allow participants without session password to attend session' %><br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
